@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>
-        @yield('title') - {{ env('APP_NAME') }}
+        @yield('title') - UZINVEST
     </title>
 
     <!-- Fonts -->
@@ -56,11 +56,6 @@
                 @endif
             </div>
         </header>
-        <div class="row">
-            <div class="col">
-
-            </div>
-        </div>
         @yield('content')
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
