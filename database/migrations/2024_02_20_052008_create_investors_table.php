@@ -18,10 +18,10 @@ return new class extends Migration
             $table->integer('project_id');
             $table->string('name')->unique();
             $table->string('slug');
-            $table->integer('amount');
-            $table->string('email')->unique()->nullable();
-            $table->string('phone')->unique()->nullable();
-            $table->text('address')->nullable();
+            $table->integer('amount')->default(0);
+            $table->string('email')->unique();
+            $table->string('phone')->unique();
+            $table->text('address');
             $table->timestamps();
         });
     }

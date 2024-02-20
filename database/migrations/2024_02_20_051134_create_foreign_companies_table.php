@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('foreign_companies', function (Blueprint $table) {
             $table->id();
             $table->string('investor_id');
-            $table->integer('industy_id');
+            $table->integer('industry_id');
             $table->string('name')->unique();
-            $table->string('slug')->nullable();
-            $table->string('email')->unique()->nullable();
-            $table->string('phone')->unique()->nullable();
-            $table->text('address')->nullable();
+            $table->string('slug');
+            $table->string('email');
+            $table->string('phone');
+            $table->text('address');
             $table->timestamps();
         });
     }
