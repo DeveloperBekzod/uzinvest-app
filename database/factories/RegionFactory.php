@@ -2,15 +2,13 @@
 
 namespace Database\Factories;
 
-use App\Models\Country;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Country>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Region>
  */
-class CountryFactory extends Factory
+class RegionFactory extends Factory
 {
-
     /**
      * Define the model's default state.
      *
@@ -19,8 +17,8 @@ class CountryFactory extends Factory
     public function definition(): array
     {
         return [
-            'name_uz' => $this->faker->unique()->country(),
-            'name_ru' => $this->faker->unique()->country(),
+            'name_uz' => $this->faker->unique()->city(),
+            'name_ru' => $this->faker->unique()->city(),
         ];
     }
 }
