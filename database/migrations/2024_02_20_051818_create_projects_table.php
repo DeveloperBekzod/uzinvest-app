@@ -19,9 +19,9 @@ return new class extends Migration
             $table->integer('local_company_id');
             $table->integer('official_people_id');
             $table->string('name_uz')->unique();
-            $table->string('name_ru')->unique()->nullable();
-            $table->string('slug_uz')->nullable();
-            $table->string('slug_ru')->nullable();
+            $table->string('name_ru')->unique();
+            $table->string('slug_uz');
+            $table->string('slug_ru');
             $table->integer('amount');
             $table->timestamps();
         });
