@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('industries', function (Blueprint $table) {
             $table->id();
             $table->string('name_uz')->unique();
-            $table->string('name_ru')->unique()->nullable();
-            $table->string('slug_uz')->nullable();
-            $table->string('slug_ru')->nullable();
+            $table->string('name_ru')->unique();
+            $table->string('slug_uz');
+            $table->string('slug_ru');
             $table->timestamps();
         });
     }
