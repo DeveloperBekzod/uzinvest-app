@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\InvestorController;
 use App\Http\Controllers\LocalCompanyController;
 use App\Http\Controllers\ProfileController;
@@ -23,9 +24,7 @@ Route::get('/', function () {
 
 
 Route::group(['middleware' => ['role:admin']], function () {
-    Route::get('dashboard', function () {
-        return view('dashboard');
-    })->middleware(['auth', 'verified'])->name('dashboard');
+    Route::get('dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 });
 
 Route::middleware('auth')->group(function () {
