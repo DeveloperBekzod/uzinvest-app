@@ -57,10 +57,10 @@
                                             {{ $company->name }}
                                         </td>
                                         <td class="px-6 py-4">
-                                            {{ $company->industry_id }}
+                                            {{ $company->industry->name_uz }}
                                         </td>
                                         <td class="px-6 py-4">
-                                            {{ $company->region_id }}
+                                            {{ $company->region->name_uz }}
                                         </td>
                                         <td class="px-6 py-4">
                                             {{ $company->email }}

@@ -14,6 +14,7 @@ class LocalCompanyController extends Controller
     public function index()
     {
         $companies = LocalCompany::all();
+
         return view('entrepreneurs.index', compact('companies'));
     }
 

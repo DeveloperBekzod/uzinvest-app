@@ -27,4 +27,9 @@ class LocalCompany extends Model
     {
         return $this->belongsTo(Industry::class);
     }
+
+    public function region()
+    {
+        return $this->belongsTo(Region::class);
+    }
 }
