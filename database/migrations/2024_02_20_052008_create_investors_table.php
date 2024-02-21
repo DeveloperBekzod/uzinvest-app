@@ -13,12 +13,15 @@ return new class extends Migration
     {
         Schema::create('investors', function (Blueprint $table) {
             $table->id();
-            $table->integer('category_id');
-            $table->integer('industry_id');
-            $table->integer('project_id');
             $table->string('name')->unique();
             $table->string('slug');
-            $table->integer('amount')->default(0);
+            $table->unsignedInteger('country_id');
+            $table->foreign('country_id')->references('id')->on('countries');
+            $table->unsignedInteger('industry_id');
+            $table->foreign('industry_id')->references('id')->on('industries');
+            $table->unsignedBigInteger('amount');
+            $table->unsignedInteger('project_id');
+            $table->foreign('project_id')->references('id')->on('projects');
             $table->string('email')->unique();
             $table->string('phone')->unique();
             $table->text('address');

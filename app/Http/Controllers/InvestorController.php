@@ -13,7 +13,8 @@ class InvestorController extends Controller
      */
     public function index()
     {
-        return view('investors.index');
+        $investors = Investor::all();
+        return view('investors.index', compact('investors'));
     }
 
     /**

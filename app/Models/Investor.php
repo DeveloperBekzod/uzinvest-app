@@ -24,4 +24,19 @@ class Investor extends Model
         'phone',
         'address',
     ];
+
+    public function industry()
+    {
+        return $this->belongsTo(Industry::class);
+    }
+
+    public function country()
+    {
+        return $this->belongsTo(Country::class);
+    }
+
+    public function project()
+    {
+        return $this->belongsTo(Project::class);
+    }
 }

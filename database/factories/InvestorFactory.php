@@ -17,7 +17,7 @@ class InvestorFactory extends Factory
     public function definition(): array
     {
         return [
-            'category_id' => $this->faker->numberBetween(1, 20),
+            'country_id' => $this->faker->numberBetween(1, 20),
             'industry_id' => $this->faker->numberBetween(1, 20),
             'project_id' => $this->faker->numberBetween(1, 20),
             'name' => $this->faker->name(),
