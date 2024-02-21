@@ -3,7 +3,7 @@
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ __('Проекты') }}
             @role(['admin', 'moderator'])
-                <a class="float-right bg-lime-600 rounded-md p-2" href="route('projects.create')">Создавать</a>
+                <a class="float-right bg-lime-600 rounded-md p-2" href="{{ route('projects.create') }}">Создать</a>
             @endrole
         </h2>
     </x-slot>
@@ -54,22 +54,22 @@
                                             {{ $project->name_uz }}
                                         </td>
                                         <td class="px-6 py-4">
-                                            {{ $project->industry_id }}
+                                            {{ $project->industry->name_uz }}
                                         </td>
                                         <td class="px-6 py-4">
-                                            {{ $project->region_id }}
+                                            {{ $project->region->name_uz }}
                                         </td>
                                         <td class="px-6 py-4">
                                             {{ $project->amount }} $
                                         </td>
                                         <td class="px-6 py-4">
-                                            {{ $project->investor_id }}
+                                            {{ $project->investor->name }}
                                         </td>
                                         <td class="px-6 py-4">
-                                            {{ $project->official_people_id }}
+                                            {{ $project->official_people->name }}
                                         </td>
                                         <td class="px-6 py-4">
-                                            {{ $project->local_company_id }}
+                                            {{ $project->local_company->name }}
                                         </td>
                                     </tr>
                                 @empty

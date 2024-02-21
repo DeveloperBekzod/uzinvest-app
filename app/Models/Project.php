@@ -25,4 +25,29 @@ class Project extends Model
         'slug_ru',
         'amount',
     ];
+
+    public function industry()
+    {
+        return $this->belongsTo(Industry::class);
+    }
+
+    public function region()
+    {
+        return $this->belongsTo(Region::class);
+    }
+
+    public function investor()
+    {
+        return $this->belongsTo(Investor::class);
+    }
+
+    public function official_people()
+    {
+        return $this->belongsTo(OfficialPerson::class);
+    }
+
+    public function local_company()
+    {
+        return $this->belongsTo(LocalCompany::class);
+    }
 }

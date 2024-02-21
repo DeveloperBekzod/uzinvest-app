@@ -2,6 +2,9 @@
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ __('Инвесторы') }}
+            @role(['admin', 'moderator'])
+                <a class="float-right bg-lime-600 rounded-md p-2" href="{{ route('projects.create') }}">Создать</a>
+            @endrole
         </h2>
     </x-slot>
 

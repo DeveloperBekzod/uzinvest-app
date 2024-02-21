@@ -3,7 +3,7 @@
         <h2 class=" font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ __('Предприниматели') }}
             @role(['admin', 'moderator'])
-                <a class="float-right bg-lime-600 rounded-md p-2" href="route('entrepreneurs.create')">Создавать</a>
+                <a class="float-right bg-lime-600 rounded-md p-2" href="route('entrepreneurs.create')">Создать</a>
             @endrole
         </h2>
     </x-slot>
