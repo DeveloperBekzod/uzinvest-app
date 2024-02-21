@@ -141,7 +141,7 @@
                                         <div class="row ">
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                                                 <div class="card-content">
-                                                    <h5 class="font-15">Revenue</h5>
+                                                    <h5 class="font-15">Total Revenue</h5>
                                                     <h2 class="mb-3 font-18">$ {{ $revenue }}</h2>
                                                     <p class="mb-0"><span class="col-green">42%</span> Increase</p>
                                                 </div>
@@ -159,16 +159,37 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 col-sm-12 col-lg-4">
+                        <div class="col-6">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4>Страны</h4>
+                                    <h4>Стоимость инвестиции из стран</h4>
                                 </div>
                                 <div class="card-body">
-                                    <div id="chart4" class="chartsh"></div>
+                                    <div class="">{!! $countryChart->container() !!}</div>
                                 </div>
                             </div>
                         </div>
+                        <div class="col-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4>Стоимость проектов в отрасли ($)</h4>
+                                </div>
+                                <div class="card-body">
+                                    {!! $industryChart->container() !!}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4>Стоимость проектов в Регионax ($)</h4>
+                                </div>
+                                <div class="card-body">
+                                    {!! $regionChart->container() !!}
+                                </div>
+                            </div>
+                        </div>
+                        {{--
                         <div class="col-12 col-sm-12 col-lg-4">
                             <div class="card">
                                 <div class="card-header">
@@ -195,7 +216,7 @@
                                     <div id="chart2" class="chartsh"></div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </section>
                 <div class="settingSidebar">
@@ -313,6 +334,9 @@
     <script src="/dashboard_source/assets/js/scripts.js"></script>
     <!-- Custom JS File -->
     <script src="/dashboard_source/assets/js/custom.js"></script>
+    {{ $countryChart->script() }}
+    {{ $industryChart->script() }}
+    {{ $regionChart->script() }}
 </body>
 
 </html>
