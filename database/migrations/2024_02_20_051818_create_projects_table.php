@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('slug_uz');
             $table->string('slug_ru');
             $table->integer('amount');
+            $table->boolean('is_active')->default(false);
             $table->timestamps();
         });
     }

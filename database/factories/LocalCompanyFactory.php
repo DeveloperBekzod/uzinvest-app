@@ -18,6 +18,7 @@ class LocalCompanyFactory extends Factory
     {
         return [
             'industry_id' => $this->faker->numberBetween(1, 20),
+            'region_id' => $this->faker->numberBetween(1, 20),
             'founder' => $this->faker->name(),
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->email(),

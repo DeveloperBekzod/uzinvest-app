@@ -20,4 +20,9 @@ class Industry extends Model
         'slug_uz',
         'slug_ru',
     ];
+
+    public function LocalCompanies()
+    {
+        return $this->hasMany(LocalCompany::class);
+    }
 }

@@ -22,4 +22,9 @@ class LocalCompany extends Model
         'phone',
         'address',
     ];
+
+    public function industry()
+    {
+        return $this->belongsTo(Industry::class);
+    }
 }

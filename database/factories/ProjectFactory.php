@@ -25,6 +25,7 @@ class ProjectFactory extends Factory
             'name_uz' => $this->faker->name(),
             'name_ru' => $this->faker->name(),
             'amount' => $this->faker->numberBetween(10000, 2000000000),
+            'is_active' => $this->faker->boolean(),
         ];
     }
 }

@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('local_companies', function (Blueprint $table) {
             $table->id();
-            $table->integer('industry_id');
+            $table->unsignedBigInteger('industry_id')->nullable();
+            $table->foreign('industry_id')->references('id')->on('industries');
+            $table->unsignedBigInteger('region_id')->nullable();
+            $table->foreign('region_id')->references('id')->on('regions');
             $table->string('founder');
             $table->string('name')->unique();
             $table->string('slug')->nullable();

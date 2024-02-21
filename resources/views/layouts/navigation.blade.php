@@ -5,23 +5,26 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
+                    {{-- <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" /> --}}
+                    <a href="{{ route('investors.index') }}">
+                        <h1 class="text-white font-bold">UZINVEST</h1>
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    @role('admin')
+                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                            {{ __('Dashboard') }}
+                        </x-nav-link>
+                    @endrole
+                    <x-nav-link :href="route('investors.index')" :active="request()->routeIs('investors.index')">
                         {{ __('Инвесторы') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('предприниматели') }}
+                    <x-nav-link :href="route('entrepreneurs.index')" :active="request()->routeIs('entrepreneurs.index')">
+                        {{ __('Предприниматели') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href="route('projects.index')" :active="request()->routeIs('projects.index')">
                         {{ __('Проекты') }}
                     </x-nav-link>
                     <x-dropdown>
