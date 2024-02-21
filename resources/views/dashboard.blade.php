@@ -1,37 +1,17 @@
-{{-- <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
-
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __('') }}
-                </div>
-            </div>
-        </div>
-    </div>
-</x-app-layout> --}}
 <!DOCTYPE html>
 <html lang="en">
-
-
-<!-- index.html  21 Nov 2019 03:44:50 GMT -->
 
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <title>Admin Dashboard</title>
     <!-- General CSS Files -->
-    <link rel="stylesheet" href="/dashboard/assets/css/app.min.css">
+    <link rel="stylesheet" href="/dashboard_source/assets/css/app.min.css">
     <!-- Template CSS -->
-    <link rel="stylesheet" href="/dashboard/assets/css/style.css">
-    <link rel="stylesheet" href="/dashboard/assets/css/components.css">
+    <link rel="stylesheet" href="/dashboard_source/assets/css/style.css">
+    <link rel="stylesheet" href="/dashboard_source/assets/css/components.css">
     <!-- Custom style CSS -->
-    <link rel="stylesheet" href="/dashboard/assets/css/custom.css">
+    <link rel="stylesheet" href="/dashboard_source/assets/css/custom.css">
 </head>
 
 <body>
@@ -52,24 +32,19 @@
                 </div>
                 <ul class="navbar-nav navbar-right">
                     <li class="dropdown"><a href="#" data-toggle="dropdown"
-                            class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image"
-                                src="assets/img/user.png" class="user-img-radious-style"> <span
-                                class="d-sm-none d-lg-inline-block"></span></a>
+                            class="dropdown-toggle btn btn-primary">
+                            <span class="d-lg-inline-block"{{--  style="color: black" --}}>{{ Auth::user()->name }}</span>
+                        </a>
                         <div class="dropdown-menu dropdown-menu-right pullDown">
-                            <div class="dropdown-title">Hello Sarah Smith</div>
-                            <a href="profile.html" class="dropdown-item has-icon"> <i class="far
+                            <a href="{{ route('profile.edit') }}" class="dropdown-item has-icon"> <i
+                                    class="far
 										fa-user"></i>
                                 Profile
-                            </a> <a href="timeline.html" class="dropdown-item has-icon"> <i class="fas fa-bolt"></i>
-                                Activities
-                            </a> <a href="#" class="dropdown-item has-icon"> <i class="fas fa-cog"></i>
-                                Settings
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a href="auth-login.html" class="dropdown-item has-icon text-danger"> <i
-                                    class="fas fa-sign-out-alt"></i>
-                                Logout
-                            </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="{{ route('logout') }}" class="dropdown-item has-icon text-danger"> <i
+                                        class="fas fa-sign-out-alt"></i>
+                                    Logout
+                                </a>
                         </div>
                     </li>
                 </ul>
@@ -106,7 +81,7 @@
                                             </div>
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                                                 <div class="banner-img">
-                                                    <img src="assets/img/banner/1.png" alt="">
+                                                    <img src="dashboard_source/assets/img/banner/1.png" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -128,7 +103,7 @@
                                             </div>
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                                                 <div class="banner-img">
-                                                    <img src="assets/img/banner/2.png" alt="">
+                                                    <img src="dashboard_source/assets/img/banner/2.png" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -151,7 +126,7 @@
                                             </div>
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                                                 <div class="banner-img">
-                                                    <img src="assets/img/banner/3.png" alt="">
+                                                    <img src="dashboard_source/assets/img/banner/3.png" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -173,7 +148,8 @@
                                             </div>
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                                                 <div class="banner-img">
-                                                    <img src="assets/img/banner/4.png" alt="">
+                                                    <img src="dashboard_source/assets/img/banner/4.png"
+                                                        alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -412,7 +388,7 @@
             </div>
             <footer class="main-footer">
                 <div class="footer-left">
-                    <a href="">Bekzod</a></a>
+                    <a href="">Bekzod Raximov</a></a>
                 </div>
                 <div class="footer-right">
                 </div>
@@ -420,18 +396,15 @@
         </div>
     </div>
     <!-- General JS Scripts -->
-    <script src="/dashboard/assets/js/app.min.js"></script>
+    <script src="/dashboard_source/assets/js/app.min.js"></script>
     <!-- JS Libraies -->
-    <script src="/dashboard/assets/bundles/apexcharts/apexcharts.min.js"></script>
+    <script src="/dashboard_source/assets/bundles/apexcharts/apexcharts.min.js"></script>
     <!-- Page Specific JS File -->
-    <script src="/dashboard/assets/js/page/index.js"></script>
+    <script src="/dashboard_source/assets/js/page/index.js"></script>
     <!-- Template JS File -->
-    <script src="/dashboard/assets/js/scripts.js"></script>
+    <script src="/dashboard_source/assets/js/scripts.js"></script>
     <!-- Custom JS File -->
-    <script src="/dashboard/assets/js/custom.js"></script>
+    <script src="/dashboard_source/assets/js/custom.js"></script>
 </body>
-
-
-<!-- index.html  21 Nov 2019 03:47:04 GMT -->
 
 </html>
