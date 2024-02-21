@@ -10,4 +10,4 @@
 
 ## Loyiha bazasi ushbu repozitoryda mavjud
 
-[uzinvest.sql](https://github.com/DeveloperBekzod/uzinvest-app/blob/master/uzinvest.sql)
+SQL Baza - [uzinvest.sql](https://github.com/DeveloperBekzod/uzinvest-app/blob/master/uzinvest.sql)
