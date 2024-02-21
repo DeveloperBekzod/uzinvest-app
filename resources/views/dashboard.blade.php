@@ -52,7 +52,7 @@
             <div class="main-sidebar sidebar-style-2">
                 <aside id="sidebar-wrapper">
                     <div class="sidebar-brand">
-                        <a href=""><span class="logo-name">UZINVEST</span></a>
+                        <a href="{{ route('investors.index') }}"><span class="logo-name">UZINVEST</span></a>
                     </div>
                     <ul class="sidebar-menu">
                         <li class="menu-header">Main</li>
